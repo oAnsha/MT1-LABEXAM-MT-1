@@ -1,0 +1,36 @@
+@baseUrl = http://localhost:4000
+
+### 1. Get all books
+GET {{baseUrl}}/books
+Accept: application/json
+
+### 2. Get book with ID 1
+GET {{baseUrl}}/books/1
+Accept: application/json
+
+### 3. Add book with ID 4
+POST {{baseUrl}}/books
+Content-Type: application/json
+
+{
+  "id": 4,
+  "title": "Clean Code",
+  "author": "Robert C. Martin",
+  "price": 550,
+  "category": "Programming"
+}
+
+### 4. Update book with ID 1
+PUT {{baseUrl}}/books/1
+Content-Type: application/json
+
+{
+  "title": "The Alchemist - Updated",
+  "author": "Paulo Coelho",
+  "price": 375,
+  "category": "Fiction"
+}
+
+### 5. Delete book with ID 4
+DELETE {{baseUrl}}/books/4
+Accept: application/json
